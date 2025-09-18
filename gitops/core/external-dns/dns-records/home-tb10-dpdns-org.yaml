@@ -9,7 +9,7 @@ spec:
       recordTTL: 300
       recordType: A
       targets:
-        - 192.168.1.221
+        - 138.2.131.31
 ---
 apiVersion: externaldns.k8s.io/v1alpha1
 kind: DNSEndpoint
@@ -22,4 +22,4 @@ spec:
       recordTTL: 300
       recordType: A
       targets:
-        - 192.168.1.221
+        - 138.2.131.31
