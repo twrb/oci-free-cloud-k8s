@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - flux-webhook.nce.wtf
+        - flux-webhook.tb10.dpdns.org
       secretName: flux-webhook-tls-secret
   rules:
-    - host: flux-webhook.nce.wtf
+    - host: flux-webhook.tb10.dpdns.org
       http:
         paths:
           - path: /

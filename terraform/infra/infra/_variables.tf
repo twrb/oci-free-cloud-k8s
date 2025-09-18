@@ -28,4 +28,5 @@ variable "kubernetes_worker_nodes" {
   type        = number
 
   default = 2
+
 }

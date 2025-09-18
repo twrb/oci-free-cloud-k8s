@@ -34,11 +34,11 @@ spec:
       ingress:
         enabled: true
         hosts:
-          - prometheus.nce.wtf
+          - prometheus.tb10.dpdns.org
         tls:
           - secretName: prometheus-cert
             hosts:
-              - prometheus.nce.wtf
+              - prometheus.tb10.dpdns.org
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt
           kubernetes.io/ingress.class: nginx

@@ -18,6 +18,7 @@ module "fluxcd" {
   github_app_id              = var.github_app_id
   github_app_installation_id = var.github_app_installation_id
   github_app_pem             = var.github_app_pem
+  git_url                    = var.git_url
 }
 
 module "ingress" {

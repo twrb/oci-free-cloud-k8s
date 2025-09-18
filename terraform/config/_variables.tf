@@ -50,3 +50,8 @@ variable "github_app_pem" {
   sensitive   = true
   type        = string
 }
+
+variable "git_url" {
+  description = "Git repository URL"
+  type        = string
+}

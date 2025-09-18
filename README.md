@@ -184,13 +184,13 @@ kubernetes.
 ❯ k --kubeconfig ~/.kube/oci.kubeconfig exec -n teleport -ti deployment/teleport-cluster-auth -- tctl users reset nce
 
 # login to teleport
-❯ tsh login --proxy teleport.nce.wtf:443 --auth=local --user nce teleport.nce.wt
+❯ tsh login --proxy teleport.tb10.dpdns.org:443 --auth=local --user nce teleport.nce.wt
 ```
 
 ### Login via Github
 There's no user management in teleport, so no reset, or 2FA setup is needed.
 ```
-❯ tsh login --proxy teleport.nce.wtf:443 --auth=github-acme --user nce teleport.nce.wtf
+❯ tsh login --proxy teleport.tb10.dpdns.org:443 --auth=github-acme --user nce teleport.tb10.dpdns.org
 
 # login to the k8s cluster
 ❯ tsh kube login oci

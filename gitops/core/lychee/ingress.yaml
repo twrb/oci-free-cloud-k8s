@@ -5,15 +5,15 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     kubernetes.io/ingress.class: nginx
-    external-dns.alpha.kubernetes.io/hostname: img.nce.wtf
+    external-dns.alpha.kubernetes.io/hostname: img.tb10.dpdns.org
     nginx.ingress.kubernetes.io/proxy-body-size: "50m"
 spec:
   tls:
     - hosts:
-        - img.nce.wtf
+        - img.tb10.dpdns.org
       secretName: lychee-cert
   rules:
-    - host: img.nce.wtf
+    - host: img.tb10.dpdns.org
       http:
         paths:
           - path: /

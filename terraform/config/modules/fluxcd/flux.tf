@@ -1,6 +1,14 @@
+# provider "github" {
+#   owner = var.gh_org
+#   token = var.gh_token
+# }
 provider "github" {
   owner = var.gh_org
-  token = var.gh_token
+  app_auth {
+    id              = var.github_app_id              # or `GITHUB_APP_ID`
+    installation_id = var.github_app_installation_id # or `GITHUB_APP_INSTALLATION_ID`
+    pem_file        = var.github_app_pem      # or `GITHUB_APP_PEM_FILE`
+  }
 }
 
 resource "helm_release" "flux_operator" {
@@ -50,7 +58,7 @@ instance:
     kind: GitRepository
     url: ${var.git_url}
     path: gitops/core
-    ref: "refs/heads/main"
+    ref: "refs/heads/feature/tb10"
     provider: github
     pullSecret: flux-instance-config
 YAML
