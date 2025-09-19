@@ -4,17 +4,27 @@ metadata:
   name: github
 spec:
   type: github
-  address: https://github.com/nce/oci-free-cloud-k8s
+  address: https://github.com/twrb/oci-free-cloud-k8s
   secretRef:
     name: fluxcd-github-token
 ---
+# apiVersion: notification.toolkit.fluxcd.io/v1beta3
+# kind: Provider
+# metadata:
+#   name: slack
+# spec:
+#   type: slack
+#   channel: G2T1UTYCW
+#   address: https://slack.com/api/chat.postMessage
+#   secretRef:
+#     name: fluxcd-slack-webhook
+
 apiVersion: notification.toolkit.fluxcd.io/v1beta3
 kind: Provider
 metadata:
-  name: slack
+  name: grafana
 spec:
-  type: slack
-  channel: G2T1UTYCW
-  address: https://slack.com/api/chat.postMessage
+  type: grafana
+  address: https://monitoring.tb10.dpdns.org/api/annotations
   secretRef:
-    name: fluxcd-slack-webhook
+    name: dex-grafana-client
