@@ -51,7 +51,7 @@ spec:
         auth_url: https://login.tb10.dpdns.org/dex/auth
         token_url: https://login.tb10.dpdns.org/dex/token
         api_url: https://login.tb10.dpdns.org/dex/userinfo
-        role_attribute_path: contains(groups[*], 'nce-acme:admin') && 'Admin' || 'Viewer'
+        role_attribute_path: contains(groups[*], 'tb10-org:Admin') && 'Admin' || 'Viewer'
 
     extraSecretMounts:
       - name: dex-grafana-client
