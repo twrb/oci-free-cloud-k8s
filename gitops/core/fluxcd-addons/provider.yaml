@@ -27,4 +27,4 @@ spec:
   type: grafana
   address: https://monitoring.tb10.dpdns.org/api/annotations
   secretRef:
-    name: dex-grafana-client
+    name: grafana-alert-serviceaccount
